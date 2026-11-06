@@ -12,6 +12,10 @@ def main() -> None:
         print(f"Your current balance is: {balance}")
         amount = int(input("Please select an amount you would like to withdraw (0 to Exit): "))
 
+        if amount >= 0 :
+            print("Error: The amount must not be less than zero")
+            continue
+
         if amount == EXIT_VALUE:
             print("Exiting...")
             break
